@@ -1,0 +1,14 @@
+.bullets {
+  margin: 0;
+  padding-left: 1.2rem;
+  max-width: 54rem;
+}
+
+.bullets li {
+  margin-bottom: 0.45rem;
+  color: var(--muted);
+}
+
+.bullets li::marker {
+  color: var(--pink);
+}

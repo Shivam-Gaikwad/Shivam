@@ -1,0 +1,27 @@
+.edu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1.25rem;
+}
+
+.years {
+  margin: 0 0 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.edu h3 {
+  margin-bottom: 0.35rem;
+}
+
+.score {
+  display: inline-block;
+  margin: 0.9rem 0 0;
+  padding: 0.2rem 0.75rem;
+  border-radius: 999px;
+  background: var(--grad);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.85rem;
+}

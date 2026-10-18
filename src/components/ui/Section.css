@@ -1,0 +1,13 @@
+.title {
+  margin-bottom: 2rem;
+}
+
+.title h2::after {
+  content: "";
+  display: block;
+  width: 3.5rem;
+  height: 4px;
+  margin-top: 0.7rem;
+  border-radius: 4px;
+  background: var(--grad);
+}

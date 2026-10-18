@@ -1,0 +1,17 @@
+.caret {
+  display: inline-block;
+  width: 3px;
+  height: 1.1em;
+  margin-left: 4px;
+  vertical-align: -0.15em;
+  background: var(--cyan);
+  animation: blink 1s steps(1) infinite;
+}
+
+.typed {
+  color: var(--cyan);
+}
+
+[data-theme="light"] .typed {
+  color: #0e7490;
+}

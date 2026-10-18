@@ -1,0 +1,117 @@
+.portrait-wrap {
+  position: relative;
+  justify-self: center;
+  width: min(100%, 21rem);
+  aspect-ratio: 3 / 4;
+}
+
+.portrait-wrap::before {
+  content: "";
+  position: absolute;
+  inset: 8% 4%;
+  border-radius: 40px;
+  background: linear-gradient(135deg, var(--violet), var(--pink) 55%, var(--cyan));
+  filter: blur(46px);
+  opacity: 0.55;
+}
+
+.ring {
+  position: absolute;
+  inset: -6px;
+  border-radius: 32px;
+  overflow: hidden;
+}
+
+.ring::before {
+  content: "";
+  position: absolute;
+  inset: -50%;
+  background: conic-gradient(from 0deg, var(--violet), var(--pink), var(--cyan), var(--violet));
+  animation: spin 7s linear infinite;
+}
+
+.portrait {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  border-radius: 26px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.portrait img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.fchip {
+  position: absolute;
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  background: var(--chip-bg);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  font-size: 0.8rem;
+  font-weight: 600;
+  box-shadow: var(--shadow);
+  z-index: 2;
+  animation: float 5s ease-in-out infinite;
+}
+
+.f1 {
+  top: 8%;
+  left: -18%;
+}
+
+.f2 {
+  top: 30%;
+  right: -16%;
+  animation-delay: -1.2s;
+}
+
+.f3 {
+  bottom: 22%;
+  left: -20%;
+  animation-delay: -2.4s;
+}
+
+.f4 {
+  bottom: 6%;
+  right: -12%;
+  animation-delay: -3.4s;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes float {
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@media (max-width: 52rem) {
+  .portrait-wrap {
+    width: min(78%, 18rem);
+    margin-top: 1.5rem;
+  }
+
+  .f1 {
+    left: -6%;
+  }
+
+  .f3 {
+    left: -8%;
+  }
+
+  .f2,
+  .f4 {
+    right: -4%;
+  }
+}
